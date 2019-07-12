@@ -9,7 +9,7 @@ structure as it is. Since it uses rsync to prepare the initial backup files, thi
 script is explicitly for linux operating systems.
 
 As rsync already prepares the backup, this script compress(password-protected),
-encrypt, get hash sums, store the critical info(such as compression key, encryption key and hash sum)
+encrypt, store the critical info(such as compression key, encryption key and hash sum)
 in a file and upload the encrypted backup file ONLY to the google drive. The file containing the info
 about the  backed-up files are left there on the host, on the user dicretion. Also, all these process
 uses time stamp as the file name to ease the process of restoring them

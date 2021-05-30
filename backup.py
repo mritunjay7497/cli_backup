@@ -78,5 +78,3 @@ def backup_script():
 
 backup_dir_info()
 dir_check()
-
-

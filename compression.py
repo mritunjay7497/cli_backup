@@ -57,5 +57,11 @@ def compress_func():
 compress_func()
 
 critical_info = {"backup_file: ":backup_file_path,"compression_password: ":password}
-critical_info_cmd = 'cd /root/projects/backup_python && echo '+str(critical_info)+' >> '+backup_file_path+'.txt'
+
+# create a folder to store back-ups
+os.system('mkdir /home/$USER/backup')
+
+print(f.GREEN+"Your back-up folder is /backup in your home directory...\n\n")
+
+critical_info_cmd = 'cd /home/$USER/backup && echo '+str(critical_info)+' >> '+backup_file_path+'.txt'
 os.system(critical_info_cmd)
